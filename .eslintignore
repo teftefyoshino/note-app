@@ -1,0 +1,5 @@
+# ignore files that have not been imported from anywhere except root
+package.json
+package-lock.json
+tsconfig.json
+tailwind.config.js
