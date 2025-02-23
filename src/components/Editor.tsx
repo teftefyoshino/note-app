@@ -6,7 +6,6 @@ import {
   headingsPlugin,
   listsPlugin,
   markdownShortcutPlugin,
-  type MDXEditorMethods,
   toolbarPlugin,
   BoldItalicUnderlineToggles,
   ListsToggle,
@@ -14,7 +13,7 @@ import {
   codeMirrorPlugin,
   InsertCodeBlock,
 } from "@mdxeditor/editor";
-import { useCallback, useRef } from "react";
+import { useCallback } from "react";
 
 const plugins = [
   headingsPlugin(),
