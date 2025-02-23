@@ -1,5 +1,5 @@
-import { atom } from "jotai";
-import { Note } from "../domain/note";
+import { atom } from 'jotai';
+import { Note } from '../domain/note';
 
 export const notesAtom = atom<Array<Note>>([]);
 export const selectedNoteIdAtom = atom<string | null>(null);
@@ -19,8 +19,8 @@ export const saveNoteAtom = atom(null, (get, set, newContent: string) => {
     const updatedNote = new Note(note.id, note.title, newContent, Date.now());
     const notes = get(notesAtom);
     const updatedNotes = notes.map((n) => {
-      if (n.id !== note.id) return n;
-      return updatedNote;
+        if (n.id !== note.id) return n;
+        return updatedNote;
     });
 
     set(notesAtom, updatedNotes);
